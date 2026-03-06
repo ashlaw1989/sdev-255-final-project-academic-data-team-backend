@@ -17,7 +17,7 @@ This project is a web app for managing college courses. Teachers can create, edi
 
 ## Team Members & Responsibilities
 
- **Ashley Lawrence – Data + Backend Logic + Add Course Page**
+ **Ashley Lawrence – Data + Backend Logic + Login, Registration, and Add Course Pages**
   - Course and Teacher model & data structure
   - Add, edit, delete logic
   - Mock data setup
