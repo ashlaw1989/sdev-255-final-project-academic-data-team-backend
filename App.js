@@ -16,17 +16,14 @@ app.post("/auth", (req, res) => {
   const { username, password } = req.body;
 
   if(!username || !password) {
-    return res.status(404).json({error: "Missing username or password."});
+    return res.status(400).json({error: "Missing username or password."});
   }
   const user = users.find(u => u.username == username);
 
-  if(!user) {
-    return res.status(401).json({error: "Bad username"});
+  if(!user || user.password !== password) {
+    return res.status(401).json({ error: "Bad username or password."})
   }
 
-  if(user.password !== password) {
-    return res.status(401).json({error: "Bad password"});
-  }
   const token = jwt.encode({id: user.id, username: user.username, role: user.role}, secret);
   res.json({
     username2: user.username,
