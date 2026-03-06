@@ -18,12 +18,15 @@ This project is a web app for managing college courses. Teachers can create, edi
 ## Team Members & Responsibilities
 
  **Ashley Lawrence – Data + Backend Logic + Add Course Page**  
-  - Course model & data structure  
+  - Course and Teacher model & data structure  
   - Add, edit, delete logic & validation  
   - Mock data setup  
-  - Add course page & submission
+  - Add course page, submission, and styling
+  - Login page, submission, and styling
+  - Registration page, submission, and styling
   - Validation (required fields, credits numeric, etc.)
-  - Stage 2: Teacher course management (add/drop own courses)  
+  - Stage 2: Teacher vs Student login authorization
+  - Stage 2: Teacher course management (add/drop own courses)
 
 **Aaron Roberts – Course Index + Navigation**  
   - Index page of all courses  
