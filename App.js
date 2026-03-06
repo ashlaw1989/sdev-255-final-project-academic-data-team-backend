@@ -5,6 +5,7 @@ const { users } = require("./users")
 const app = express()
 app.use(cors())
 app.use(express.json());
+app.use(express.static("public"))
 const jwt = require("jwt-simple");
 const secret = "supersecret";
 
