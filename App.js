@@ -57,6 +57,12 @@ app.post("/register", (req, res) => {
     return res.status(400).json({error: "Missing username, password, or role."});
   }
 
+  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[^A-Za-z\d]).{10,}$/;
+
+  if(!regex.test(password)) {
+    return res.status(400).json({error: "Password too weak"})
+  }
+
   const existingUser = users.find(u => u.username == username);
   if (existingUser) {
     return res.status(409).json({error: "Username already taken"});
