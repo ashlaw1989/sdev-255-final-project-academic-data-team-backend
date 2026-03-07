@@ -60,7 +60,7 @@ app.post("/register", (req, res) => {
   const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[^A-Za-z\d]).{10,}$/;
 
   if(!regex.test(password)) {
-    return res.status(400).json({error: "Password too weak"})
+    return res.status(400).json({error: "Password must contain at least one lowercase, one uppercase, one number, one special characrer, and be at least 10 characters."})
   }
 
   const existingUser = users.find(u => u.username == username);
